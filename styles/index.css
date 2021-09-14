@@ -1,0 +1,112 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* We don't want any links to be underlined. Let's remove that globally */
+a {
+  text-decoration: none;
+}
+
+.navbar{
+  overflow: hidden;
+  background: #333333;
+  display: flex;
+  /* let's align the items so everything is nice and centered */
+  align-items: center;
+}
+
+.navbar a{
+  color: #e7e7e7;
+}
+
+.navbar ul{
+  /* Let's reset the margin and padding of the list so it's is flush. */
+  margin: 0;
+  padding: 0;
+  /* Let's remove the bullet points */
+  list-style-type: none;
+  /* display the list flex(to display items horizontaly) and align the items centered */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .brand{
+  /*display block displays element as block elementm, starts on new line */
+  display: block;
+  color:  #e7e7e7;
+  /* Remove padding from top/bottom and add 24px padding right/left */
+  padding: 0 24px;
+  font-size: 24px;
+}
+/* padding between each a  */
+.navbar ul li a{
+  color: #e7e7e7;
+  padding: 24px;
+  /*Let's make the anchor display block.
+     This will ensure when we hover, focus, or is active we get the full width and height
+      of the container.
+  */
+  display: block;
+}
+
+/* When a use hovers or focuses a link change the background */
+.navbar ul a:hover,
+.navbar ul a:focus {
+  background-color: #272727;
+}
+
+.main{
+  margin: 0;
+  padding: 0 16px;
+  background-color: #0086FF
+}
+
+.main img{
+  max-width: 75%;
+  max-height: 50%;
+}
+
+.phones{
+  margin: 0;
+  padding: 5% 5%;
+}
+
+.phones h1{
+  font-size: 3rem;
+  margin: 0 0 50px 0;
+}
+
+.phones .row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 45px;
+}
+
+.row .card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 25.000000%;
+}
+
+
+.footer{
+  height: 50px;
+  margin-top: 0 0 0 -50px;
+  padding: 0 24px;
+  background-color: #333333;
+  position: relative
+}
+
+.footer address{
+  color: white;
+  /*  is positioned relative to the nearest positioned ancestor */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
