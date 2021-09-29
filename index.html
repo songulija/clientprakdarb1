@@ -1,100 +1,286 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>Telefonu parduotuve</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <a class="brand" href="#">Telesott</a>
-      <ul>
-        <li>
-          <a href="index.html">Pagrindinis</a>
-        </li>
-        <li>
-          <a href="apie.html">Apie</a>
-        </li>
-        <li>
-          <a href="kontaktai.html">Kontaktai</a>
-        </li>
-        <li>
-          <a href="galereja.html">Galerėja</a>
-          </li>
-        <li>
-          <a href="anketa.html">Anketa</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="main">
-        <img src="https://cdn.tele2.lt/media/bns/1962-64f37666af7364da.png" alt="Samsung Galaxy A72 reklama">
-      </section>
-      <section class="phones">
-        <h1>Telefonai</h1>
-        <div class="row">
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles\navbar.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>Telefonu parduotuve</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+
+
+    /* FOR MOBILE PHONE BY DEFAULT */
+    #content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: (100px, auto);
+      max-width: 768;
+      margin: 0 auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header header header header"
+        "section section section section"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer"
+    }
+
+    section img {
+      background-color: #009EE0;
+      width: 100%;
+      height: 180px;
+    }
+
+    aside img {
+      width: 100%;
+      height: 90%;
+    }
+
+
+    section img {
+      background-color: #009EE0;
+      width: 100%;
+      height: 350px;
+    }
+
+    .grid-photos {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    #content>* {
+      padding: 30px;
+    }
+
+    header {
+      grid-area: header;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    section {
+      grid-area: section;
+    }
+
+    aside {
+      grid-area: aside;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+
+    /* NAVIGATION BAR */
+    /* We don't want any links to be underlined. Let's remove that globally */
+
+
+    .grid-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      align-items: center;
+    }
+
+
+    /* min width of browser has to be 760px. Its for desktop */
+    @media screen and (min-width: 760px) {
+      #content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: (100px, auto);
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header header header header"
+          "section section section section"
+          "aside main main main"
+          "footer footer footer footer"
+      }
+
+      aside {
+        grid-area: aside;
+      }
+
+      aside img {
+        width: 120%;
+        height: 50%;
+      }
+
+      .grid-photos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            MysteryCode
           </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/a/5/a52s-violet.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="#" target="_blank">Home</a></li>
+            <li><a href="#" target="_blank">About</a></li>
+            <li><a href="#" target="_blank">Services</a></li>
+            <li><a href="#" target="_blank">Portfolio</a></li>
+            <li><a href="#" target="_blank">Contact</a></li>
+            <a class="icon">
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+              <i class="fa fa-youtube"></i>
+
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section>
+      <img src="https://cdn.tele2.lt/media/bns/1970-0ae22ed9ed8741c1.png" alt="Nauji pasiūlimai">
+    </section>
+    <main>
+      <!-- gird that will hold all photos -->
+      <div class="grid-photos">
+        <!-- one of containers that are basically representing phone -->
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
           </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_12_raudonas_tele2_1.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/0/image/x300/17f82f742ffe127f42dca9de82fb58b1/s/m/sm-f926_zfold3_5g_front_phantomgreen_210602_1.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
+        </div>
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
           </div>
         </div>
 
-        <div class="row">
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/0/image/x300/17f82f742ffe127f42dca9de82fb58b1/s/m/sm-f711_zflip3_5g_fronttabletop_cream_210607.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/0/image/x300/17f82f742ffe127f42dca9de82fb58b1/k/6/k6-gold-__3.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/0/image/x300/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_11_tele2-tele-6_3_1.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
-          </div>
-          <div class="card">
-            <img src="https://cdn.tele2.lt/media/catalog/product/cache/0/image/x300/17f82f742ffe127f42dca9de82fb58b1/k/9/k9-black_-__4.png" alt="">
-            <div class="card-body">
-              <h4>Mi 11 Lite 6/128GB, Dual</h4>
-              <h4>149.99$</h4>
-            </div>
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/a/5/a52s-violet.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
           </div>
         </div>
-      </section>
-      <footer class="footer">
-          <address style="font-size: 80%">2021 & copy; Lukas Songulija</address>
-        </footer>
-  </body>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_12_raudonas_tele2_1.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_12_raudonas_tele2_1.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/a/5/a52s-violet.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_12_raudonas_tele2_1.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/i/p/iphone_12_raudonas_tele2_1.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/a/5/a52s-violet.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <img src="https://i.pinimg.com/originals/4d/f6/94/4df694e19930bf6a21158dd284a77581.jpg" alt="Reklama">
+    </aside>
+    <footer>
+      <p>Author: Lukas Songulija<br>
+        <a href="mailto:lsongulija@gmail.com">lsongulija@gmail.com</a>
+      </p>
+      <div>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-google"></i>
+      </div>
+      <p>
+        Copyright &copy Lukas Songulija
+      </p>
+
+    </footer>
+  </div>
+
+</body>
+
 </html>
