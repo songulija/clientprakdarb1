@@ -1,10 +1,215 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles\navbar.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .grid-photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: (100px, auto);
+    grid-gap: 10px;
+  }
+
+  .price {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  /* formos styling */
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  /* formos styling */
+  input[type=email],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  #forma {
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: inherit;
+    text-align: left;
+  }
+
+  #content>* {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: 780px) {
+    .grid-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: (100px, auto);
+      grid-gap: 10px;
+    }
+  }
+</style>
+
+<body>
+  <div id="content">
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            MysteryCode
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" target="_blank">Pagrindinis</a></li>
+            <li><a href="apie.html" target="_blank">Apie</a></li>
+            <li><a href="galereja.html" target="_blank">Galerėja</a></li>
+            <li><a href="kontaktai.html" target="_blank">Kontaktai</a></li>
+            <li><a href="anketa.html" target="_blank">Anketa</a></li>
+            <a class="icon">
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+              <i class="fa fa-youtube"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="grid-photos">
+        <!-- one of containers that are basically representing phone -->
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/o/3/o3.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn.tele2.lt/media/catalog/product/cache/1/image/x240/17f82f742ffe127f42dca9de82fb58b1/a/5/a52s-violet.png" alt="">
+          <div class="card-body">
+            <h4>Mi 11 Lite 6/128GB, Dual</h4>
+            <h4>149.99$</h4>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="price">
+        Total $449.99
+      </p>
+      <!-- form -->
+      <div id="forma">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="ex: myname@example.com">
+          <br>
+          <label for="contact">Contact Numbe</label>
+          <input type="text" id="contact" name="contact" placeholder="(000 000-0000)">
+
+          <label for="streetadress">Street Adress</label>
+          <input type="text" id="streetadress" name="streetadress">
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city">
+
+          <label for="postalcode">Postal / Zip Code</label>
+          <input type="text" id="postalcode" name="postalcode">
+
+
+          <label class="container">Paypal
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">Mastercard
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-google"></i>
+      </div>
+      <p>
+        Copyright &copy Lukas Songulija
+      </p>
+    </footer>
+  </div>
+</body>
+
 </html>
