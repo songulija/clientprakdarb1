@@ -1,10 +1,245 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    /* FOR MOBILE PHONE BY DEFAULT add change stlle*/
+    #content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: (100px, auto);
+      max-width: 768px;
+      margin: 0 auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "aside aside aside aside"
+        "footer footer footer footer"
+    }
+
+    #content>* {
+      padding: 30px;
+    }
+
+    aside img {
+      width: 100%;
+      height: 90%;
+    }
+
+    header {
+      grid-area: header;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    aside {
+      grid-area: aside;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+
+    /* table styling */
+    table,td,th {
+      border: 1px solid #adadad;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    /* min width of browser has to be 760px. Its for desktop */
+    @media screen and (min-width: 980px) {
+      #content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: (100px, auto);
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-gap: 10px;
+        grid-template-areas:
+          "header header header header"
+          "main main main aside"
+          "footer footer footer footer"
+      }
+      aside img {
+        width: 100%;
+        height: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            MysteryCode
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html" target="_blank">Pagrindinis</a></li>
+            <li><a href="apie.html" target="_blank">Apie</a></li>
+            <li><a href="galereja.html" target="_blank">Galerėja</a></li>
+            <li><a href="kontaktai.html" target="_blank">Kontaktai</a></li>
+            <li><a href="anketa.html" target="_blank">Anketa</a></li>
+            <a class="icon">
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-youtube"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <h1>Nemokamas prekių atsiėmimas</h1>
+      <p>telesott.lt parduotuvių sąrašą ir kontaktinę informaciją galite rasti čia.</p>
+      <p><b>Dėmesio!</b> Valstybinių švenčių dienomis Pigu.lt parduotuvės nedirba. Nedarbo dienų sąrašą rasite čia. </p>
+      <p><b>Dėmesio! Informuojame, kad nuo 2020 m. rugpjūčio 1 d. apsauginės veido kaukės uždarose prekybos vietose yra privalomos.</b></p>
+      <h1>Kontaktai</h1>
+      <ul>
+        <li>Klausimams apie prekes, užsakymo būklę, prekių garantijas: pagalba@telesott.lt</li>
+        <li>
+          Turite nusiskundimų apie kokybę? Informuokite mus adresu: kokybe@telesott.lt
+        </li>
+        <li>
+          Žiniasklaidai: spauda@telesott.lt
+        </li>
+        <li>
+          Rinkodara: rinkodara@telesott.lt
+        </li>
+        <li>
+          Komercija: partneriams@telesott.lt
+        </li>
+      </ul>
+
+      <h1>Norite bendradarbiauti?</h1>
+      <ul>
+        <li>Klausimams apie prekes, užsakymo būklę, prekių garantijas: pagalba@telesott.lt</li>
+        <li>
+          Turite nusiskundimų apie kokybę? Informuokite mus adresu: kokybe@pigu.lt
+        </li>
+        <li>
+          Žiniasklaidai: spauda@telesott.lt
+        </li>
+        <li>
+          Rinkodara: rinkodara@telesott.lt
+        </li>
+        <li>
+          Komercija: partneriams@telesott.lt
+        </li>
+      </ul>
+
+      <ul>
+        <li>Klausimams apie prekes, užsakymo būklę, prekių garantijas: pagalba@telesott.lt</li>
+        <li>
+          Turite nusiskundimų apie kokybę? Informuokite mus adresu: kokybe@telesott.lt
+        </li>
+        <li>
+          Žiniasklaidai: spauda@telesott.lt
+        </li>
+        <li>
+          Rinkodara: rinkodara@telesott.lt
+        </li>
+        <li>
+          Komercija: partneriams@telesott.lt
+        </li>
+      </ul>
+
+      <h1>Norite bendradarbiauti?</h1>
+      <ul>
+        <li>Klausimams apie prekes, užsakymo būklę, prekių garantijas: pagalba@telesott.lt</li>
+        <li>
+          Turite nusiskundimų apie kokybę? Informuokite mus adresu: kokybe@telesott.lt
+        </li>
+        <li>
+          Žiniasklaidai: spauda@telesott.lt
+        </li>
+        <li>
+          Rinkodara: rinkodara@telesott.lt
+        </li>
+        <li>
+          Komercija: partneriams@telesott.lt
+        </li>
+      </ul>
+      <h1>Administracija</h1>
+      <ul>
+        <li>Laisvės pr. 75, Vilnius, LT-06144</li>
+        <li>Telefonas: +370 661 05555</li>
+        <li>Faksas: +370 661 05515</li>
+      </ul>
+
+      <!-- Table -->
+      <h1>Rekvizitai</h1>
+      <table>
+        <tr>
+          <th>Įmonės kodas</th>
+          <th>300866792</th>
+        </tr>
+        <tr>
+          <td>PVM mokėtojo kodas</td>
+          <td>LT100003292317</td>
+        </tr>
+        <tr>
+          <td>Registracijos adresas</td>
+          <td>Laisvės pr. 75, Vilnius, LT-06144
+          </td>
+        </tr>
+        <tr>
+          <td>Korespondencijos adresa</td>
+          <td>Laisvės pr. 75, Vilnius, LT-06144
+          </td>
+        </tr>
+        <tr>
+          <td>Atsiskaitomoji sąskaita </td>
+          <td>LT037300010110369900
+          </td>
+        </tr>
+        <tr>
+          <td>Bankas</td>
+          <td>AB bankas „Swedbank“
+          </td>
+        </tr>
+
+      </table>
+
+    </main>
+    <aside>
+      <img src="https://i.pinimg.com/originals/4d/f6/94/4df694e19930bf6a21158dd284a77581.jpg" alt="Reklama">
+    </aside>
+    <footer>
+      <div>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-google"></i>
+      </div>
+      <p>
+        Copyright &copy Lukas Songulija
+      </p>
+    </footer>
+  </div>
+</body>
+
 </html>
